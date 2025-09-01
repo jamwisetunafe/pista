@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blue Path</title>
+  <style>
+    body {
+      background-color: #1e90ff;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding-top: 50px;
+    }
+    h1 { margin-bottom: 30px; }
+    .btn {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      margin: 10px;
+      border-radius: 50%;
+      border: none;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #0047AB; /* darker blue */
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Blue Path - Play Your Notes</h1>
+
+  <button class="btn" onclick="playNote('b4')">1</button>
+  <button class="btn" onclick="playNote('e4')">2</button>
+  <button class="btn" onclick="playNote('a5')">3</button>
+
+  <br><br>
+  <a href="index.html" style="color:white;">⬅ Back</a>
+
+  <script>
+    function playNote(note) {
+      const audio = new Audio('sounds/' + note + '.mp3');
+      audio.play();
+    }
+  </script>
+</body>
+</html>
